@@ -1,0 +1,23 @@
+<% include ../partials/head.html %>
+    <% include ../partials/header.html %>
+        <section>
+            <h3>This is the projects page.</h3>
+        </section>
+        <section>
+          <form action="addpost" method="POST">
+            <label for="title">Title</label>
+            <textarea id="title" name="title"></textarea>
+            <label for="description">Description</label>
+            <textarea id="description" name="description"></textarea>
+            <input type="submit" value="Add Challenge" />
+          </form>
+        </section>
+        <section>
+          <% for(let i = 0; i < posts.length; i++) { %>
+              <article>
+                <h2><%= posts[i].title %></h2>
+                <p><%= posts[i].description %></p>
+              </article>
+          <% } %>
+          </section>
+<% include ../partials/footer.html %>

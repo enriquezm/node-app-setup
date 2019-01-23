@@ -1,0 +1,12 @@
+<% include ../partials/head.html %>
+    <% include ../partials/header.html %>
+        <section>
+          <h2>Browse through all habits.</h2>
+          <% for(let i = 0; i < posts.length; i++) { %>
+              <article>
+                <h3><%= posts[i].title %></h3>
+                <p><%= posts[i].description %></p>
+              </article>
+          <% } %>
+        </section>
+<% include ../partials/footer.html %>
